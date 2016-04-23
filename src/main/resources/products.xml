@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <product id="00000000">
+        <name>apple</name>
+        <price>0.55</price>
+    </product>
+    <product id="00000001">
+        <name>banana</name>
+        <price>0.60</price>
+    </product>
+    <product id="00000011">
+        <name>orange</name>
+        <price>0.35</price>
+    </product>
+    <product id="00000111">
+        <name>mango</name>
+        <price>1.20</price>
+    </product>
+    <product id="00001111">
+        <name>coconut</name>
+        <price>2.05</price>
+    </product>
+    <product id="00011111">
+        <name>pineapple</name>
+        <price>2.25</price>
+    </product>
+    <product id="00111111">
+        <name>watermelon</name>
+        <price>5.52</price>
+    </product>
+    <product id="01111111">
+        <name>pear</name>
+        <price>0.63</price>
+    </product>
+    <product id="11111111">
+        <name>grapes</name>
+        <price>0.55</price>
+    </product>
+</products>
