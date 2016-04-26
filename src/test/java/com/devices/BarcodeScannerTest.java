@@ -1,20 +1,28 @@
 package test.java.com.devices;
 
-import static org.junit.Assert.*;
+import main.java.Product;
+import main.java.com.devices.BarcodeScanner;
+import org.junit.Assert;
+import org.junit.Test;
 
-/**
- * Created by Jakub Fajkowski on 24-Apr-16.
- */
 public class BarcodeScannerTest {
-    public void Query_PassingAppleID_ShouldReturnApple(){
+    BarcodeScanner barcodeScanner = new BarcodeScanner();
 
+    @Test
+    public void searchForProduct_AppleID_AppleProduct() throws Exception {
+        barcodeScanner.searchForProduct("0000000");
+        Product actual = barcodeScanner.getProduct();
+
+        Product expected = new Product("apple", 0.55);
+
+        Assert.assertEquals(expected, actual);
     }
 
-    public void Query_PassingMissingID_ShouldReturnMissingID(){
+    @Test
+    public void searchForProduct_MissingProductID_Null() throws Exception {
+        barcodeScanner.searchForProduct("99999999");
+        Product actual = barcodeScanner.getProduct();
 
-    }
-
-    public void Query_MissingDatabase_ShouldThrowException(){
-
+        Assert.assertNull(actual);
     }
 }

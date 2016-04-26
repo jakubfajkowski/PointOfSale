@@ -1,10 +1,15 @@
 package test.java;
 
-import static org.junit.Assert.*;
+import main.java.Product;
+import org.junit.Assert;
+import org.junit.Test;
 
-/**
- * Created by Jakub Fajkowski on 24-Apr-16.
- */
 public class ProductTest {
+    @Test
+    public void testEquals(){
+        Product product1 = new Product("apple", 0.55);
+        Product product2 = new Product("apple", 0.55);
 
+        Assert.assertTrue(product1.equals(product2));
+    }
 }
